@@ -356,7 +356,7 @@ async def main():
                 print(f"{Colors.SUCCESS}[✓] App ID: {Colors.RESET}{Colors.RESULT}{result['app_id']}{Colors.RESET}")
             print("═" * 70 + "\n")
             
-            await bot.countdown(10)
+            await bot.countdown(60)
 
     except KeyboardInterrupt:
         bot.log("Process interrupted by user", Colors.WARNING)
