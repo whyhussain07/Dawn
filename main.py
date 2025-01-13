@@ -246,7 +246,8 @@ class DawnValidatorBot:
                 print(f"{Colors.ERROR}Token cannot be empty{Colors.RESET}")
                 continue
                 
-            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}]{Colors.SUCCESS} ✓ Account details saved{Colors.RESET}")
+            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}]"+
+                  f"{Colors.SUCCESS} ✓ Account details saved{Colors.RESET}")
             return [{'email': email, 'token': token}]
 
     @staticmethod
@@ -280,11 +281,11 @@ class DawnValidatorBot:
     @staticmethod
     def display_welcome() -> None:
         print(f"""
-{Colors.INFO}{Style.BRIGHT}╔══════════════════════════════════════════════╗
-║            Dawn Validator AutoBot            ║
-║     Github: https://github.com/IM-Hanzou     ║
-║      Welcome and do with your own risk!      ║
-╚══════════════════════════════════════════════╝{Colors.RESET}
+{Colors.INFO}{Style.BRIGHT}╔═════════════════════════════════════════════════╗
+║            Dawn Validator AutoBot               ║
+║     Github: https://github.com/whyhussain07     ║
+║      Welcome and do with your own risk!         ║
+╚═════════════════════════════════════════════════╝{Colors.RESET}
 """)
 
     async def process_account(self, account: Dict[str, str]) -> Dict:
@@ -355,7 +356,7 @@ async def main():
                 print(f"{Colors.SUCCESS}[✓] App ID: {Colors.RESET}{Colors.RESULT}{result['app_id']}{Colors.RESET}")
             print("═" * 70 + "\n")
             
-            await bot.countdown(500)
+            await bot.countdown(10)
 
     except KeyboardInterrupt:
         bot.log("Process interrupted by user", Colors.WARNING)
